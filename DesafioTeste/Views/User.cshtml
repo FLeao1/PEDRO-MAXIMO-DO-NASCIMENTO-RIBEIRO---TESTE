@@ -35,6 +35,9 @@
                         </td>
                         <td class="text-center">
                             <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id" class="btn btn-warning btn-sm">Editar</a>
+                            <form asp-controller="User" asp-action="Delete" asp-route-id="@user.Id" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
+                            </form>
                         </td>
                     </tr>
                 }
@@ -71,5 +74,9 @@
         background-color: #ffc107;
         border-color: #ffc107;
     }
-    
+
+    .btn-danger {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
 </style>

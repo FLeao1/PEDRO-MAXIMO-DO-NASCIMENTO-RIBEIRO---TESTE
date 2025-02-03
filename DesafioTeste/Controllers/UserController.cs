@@ -71,5 +71,16 @@ namespace DesafioTeste.Controllers
             }
             return View(user);  
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user == null) return NotFound();
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("User");
+        }
     }
 }
