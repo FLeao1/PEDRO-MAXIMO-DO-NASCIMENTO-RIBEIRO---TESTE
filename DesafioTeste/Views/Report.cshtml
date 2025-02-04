@@ -1,0 +1,52 @@
+@model IEnumerable<DesafioTeste.Models.User>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Relatório de Usuários</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Gênero</th>
+                    <th>Avatar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.FirstName @user.LastName</td>
+                        <td>@user.Email</td>
+                        <td>@user.Gender</td>
+                        <td>
+                            <img src="@user.Avatar" class="img-fluid rounded-circle" width="50" height="50" alt="Avatar">
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<style>
+    table th, table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th, .table td {
+        border-color: #dee2e6;
+    }
+
+    .table-bordered {
+        border: 1px solid #dee2e6;
+    }
+</style>

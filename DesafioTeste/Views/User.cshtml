@@ -12,6 +12,10 @@
         <button type="submit" class="btn btn-success btn-lg">Gerar Usuário</button>
     </form>
 
+    <div class="text-center mb-4">
+        <a asp-controller="User" asp-action="Report" class="btn btn-info btn-lg">Relatório de Usuários</a>
+    </div>
+
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
             <thead class="table-dark">
@@ -78,5 +82,10 @@
     .btn-danger {
         background-color: #dc3545;
         border-color: #dc3545;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
     }
 </style>

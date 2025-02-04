@@ -82,5 +82,11 @@ namespace DesafioTeste.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("User");
         }
+
+        public async Task<IActionResult> Report()
+        {
+            var users = await _context.Users.ToListAsync();
+            return View("~/Views/Report.cshtml", users);
+        }
     }
 }
