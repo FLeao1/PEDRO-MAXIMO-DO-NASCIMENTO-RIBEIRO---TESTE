@@ -1,0 +1,20 @@
+.sidebar {
+    height: 100vh;
+    background: linear-gradient(to bottom, #4b0082, #8a2be2);
+    padding: 15px;
+    color: white;
+}
+
+.sidebar .navbar {
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: white;
+    color: #4b0082;
+}
